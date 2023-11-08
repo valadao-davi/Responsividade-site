@@ -1,0 +1,146 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+*{
+    margin: 0;
+}
+body{
+    flex-direction: column;
+    display: flex;
+    font-family:sans-serif;
+    background-color: black;
+    color: white;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+.principal{
+    width: 28%;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+}
+.blocos{
+    display: grid;
+    margin: 64px auto;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+}
+.menu_lateral{
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    border-right: solid 1px white;
+}
+.espaco_grande{
+    background-color: white;
+    border-radius: 8px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.espaco_normal{
+    background-color: white;
+    border-radius: 8px;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#video{
+    width: 28%;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 10px;
+}
+.formulario{
+    margin: auto auto 150px auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    background-color: white;
+}
+h1{
+    border-bottom: 1px solid black;
+    color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.form-pequeno{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+input{
+    width: 60%;
+}
+.form-grande{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+textarea{
+    width: 100%;
+}
+p{
+    color: black;
+}
+
+@media screen and (min-width: 420px) and (max-width: 850px){
+    main{
+        flex-direction: column;
+    }
+    #menu_lateral{
+        display: none;
+    }
+    .formulario{
+        display: none;
+    }
+    .principal{
+        margin: 10px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .blocos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .blocos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .espaco_grande{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 1420px) {
+    .principal{
+        width: 70%;
+    }
+    #menu_lateral{
+        width: 20%;
+    }
+}
